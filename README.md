@@ -77,7 +77,7 @@ The Task Management System API provides the following endpoints for managing tas
 - Login: `POST /api/auth/login`
 
 - **Task Management:**
-- Create Task: `POST /api/`tasks
-- Get All Tasks: `GET /api/tasks
-- Update Task: `PUT /api/tasks/:id`
-- Delete Task: `DELETE /api/tasks/:id`
+- Create Task: `POST /api/todos/new
+- Get All Tasks: `GET /api/todos/current
+- Update Task: `PUT /api/todos/:id`
+- Delete Task: `DELETE /api/todos/:id`
