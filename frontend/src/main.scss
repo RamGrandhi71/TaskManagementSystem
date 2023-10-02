@@ -1,18 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
-$primary: #00a796;
-$primary-dark: #026158;
-$dark: #1f2732;
-$dark-light: #2a343f;
-$white: #fff;
+$primary: #000;             // Change primary color to black
+$primary-dark: #333;        // Change primary-dark color to a darker shade of black
+$dark: #fff;                // Change dark background to white
+$dark-light: #ddd;          // Change dark-light background to a light gray
+$white: #000;               // Change text color to black
 $red: #fc6666;
+$button-text-color: #fff;
+
 
 body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0;
   margin: 0;
-  background-color: $dark;
-  color: $white;
+  background-color: $dark;   // Use white background
+  color: $white; 
 }
 
 *,
@@ -67,7 +69,7 @@ textarea {
   background-color: $primary;
   padding: 10px 20px;
   border: none;
-  color: $white;
+  color: $button-text-color; // Use the new variable here
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.2s ease;
