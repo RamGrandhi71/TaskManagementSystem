@@ -1,28 +1,30 @@
 require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
+const express =require('express');
+const mongoose =require('mongoose');
+const cookieParser=require("cookie-parser");
 
-//importing routes
-const authRoute = require("./routes/auth");
+const authRoute=require("./routes/auth");
+const toDosRoute = require("./routes/todo");
 
-const app = express();
+const app=express();
 
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(cookieParser());
 
-app.get("/api", (req, res) => {
-    res.send("test");
+app.get("/api",(req,res)=>{
+  res.send("Todo List");
 });
+app.use("/api/auth",authRoute);
+app.use("/api/todos", toDosRoute);
 
-app.use("/api/auth", authRoute);
 
-mongoose.connect(process.env.MONGO_URI).then(() => {
-    console.log("Connected to db");
-
-    app.listen(process.env.PORT, ()=> {
-        console.log(`Server running on port ${process.env.PORT}`);
-    });
-}).catch((e) => {
-    console.log(e);
-})
+mongoose.connect(process.env.MONGO_URI).then(()=>{
+console.log("Connected to database");
+app.listen(process.env.PORT,()=> {
+  console.log(`Server running on port ${process.env.PORT}`);
+});
+}).catch((error)=> {
+  console.log(error);
+}); 
 
