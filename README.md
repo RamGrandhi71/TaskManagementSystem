@@ -1,4 +1,4 @@
-##Task Management System (MERN Stack)
+# Task Management System (MERN Stack)
 
 ## Introduction
 
@@ -10,7 +10,6 @@ The Task Management System is a web application built using the MERN stack (Mong
 - User Login: Registered users can log in securely to access their tasks.
 - Task Management: Users can perform CRUD (Create, Read, Update, Delete) operations on tasks.
 - Task Listing: Display a list of tasks with essential details, such as title, description, due date, and status.
-- Task Filtering: Filter tasks based on their status (e.g., "To Do,""In Progress"," "Done").
 - User Authentication: Ensure secure user authentication using JWT (JSON Web Tokens).
 - Responsive Design: Provide a user-friendly interface accessible on various devices and screen sizes.
 
@@ -66,7 +65,6 @@ The database schema includes two main tables/entities:
 - Fields:
 - `id` (Primary Key, ObjectId)
 - `title` (String)
-- `description` (String)
 - `status` (String)
 - `userId` (Reference to Users)
 
@@ -75,12 +73,11 @@ The database schema includes two main tables/entities:
 The Task Management System API provides the following endpoints for managing tasks and user authentication:
 
 - **User Management:**
-- Registration: `POST /api/users/register`
-- Login: `POST /api/users/login`
+- Registration: `POST /api/auth/register`
+- Login: `POST /api/auth/login`
 
 - **Task Management:**
-- Create Task: `POST /api/tasks`
-- Get All Tasks: `GET /api/tasks`
-- Get Task by ID: `GET /api/tasks/:id`
+- Create Task: `POST /api/`tasks
+- Get All Tasks: `GET /api/tasks
 - Update Task: `PUT /api/tasks/:id`
 - Delete Task: `DELETE /api/tasks/:id`
